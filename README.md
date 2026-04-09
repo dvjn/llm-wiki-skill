@@ -30,12 +30,17 @@ npx skills install dvjn/llm-wiki-skill
 
 ## What's in the skill
 
-```
+```text
 skills/llm-wiki/
-├── SKILL.md          # Loaded into the LLM's context
-├── assets/           # Reference materials
-├── evals/            # Evaluation prompts
-└── references/       # Extra docs
+├── SKILL.md                  # Router plus core operating model
+├── evals/                    # Evaluation prompts
+└── references/
+    ├── conventions.md        # Shared naming, linking, stubs, and index rules
+    ├── ingest.md             # Source ingestion workflow
+    ├── lint.md               # Wiki maintenance workflow
+    ├── page-templates.md     # Reusable page shapes
+    ├── query.md              # Query workflow
+    └── wiki-setup.md         # New-project setup and local schema guidance
 ```
 
 ## Credit
@@ -45,4 +50,3 @@ skills/llm-wiki/
 ## License
 
 MIT
-
