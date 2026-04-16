@@ -59,7 +59,7 @@ Read [references/ingest.md](references/ingest.md).
 
 ### Query
 
-Use when answering a question from the existing wiki. The query workflow starts from `index.md`, reads only the pages needed, answers with wiki-style citations, and offers to persist substantial synthesis back into the wiki.
+Use when answering a question from the existing wiki. The query workflow starts from `index.md`, reads only the pages needed, answers with wiki-style citations, and offers to file substantial synthesis back into the wiki (filing directly when clearly durable).
 
 Read [references/query.md](references/query.md).
 
