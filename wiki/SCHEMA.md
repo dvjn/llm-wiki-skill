@@ -1,4 +1,4 @@
-# Wiki Schema — llm-wiki-skill
+# Wiki Schema — LLM Wiki
 
 This wiki documents the `llm-wiki` skill itself: its architecture, design decisions, workflows, and conventions. It serves as a meta-example of a wiki built and maintained using the skill.
 
