@@ -17,9 +17,9 @@ Build and maintain a knowledge wiki using LLMs. The wiki accumulates understandi
 | Query   | `references/query.md`                                     |
 | Lint    | `references/lint.md`                                     |
 | Setup   | `references/wiki-setup.md` (never otherwise)             |
-| Create  | `references/page-templates.md` (load ONE template only) |
+| Create  | `references/templates/<type>.md` (one of: concept, entity, decision, comparison, source, stub) |
 
-**Violations:** Loading conventions.md for query, loading wiki-setup.md when wiki exists, reading all 6 templates when creating one page.
+**Violations:** Loading conventions.md for query, loading wiki-setup.md when wiki exists, loading multiple template files when creating one page.
 
 ## Directory Structure
 
@@ -38,33 +38,20 @@ wiki/
 - Update `index.md` on page create/rename/material change
 - Append to `log.md` on ingest, lint, and substantial synthesis
 - Create stubs for important but underdeveloped concepts
-- **Prefer helper scripts over manual file editing** — scripts enforce naming conventions and formatting automatically
-
-## Helper Scripts
-
-Use these scripts to reduce repetitive work:
-
-| Script                      | Purpose                           | Usage                                    |
-| --------------------------- | --------------------------------- | ---------------------------------------- |
-| `scripts/wiki-new-page`       | Create pages with correct format  | `wiki-new-page <type> <name>`             |
-| `scripts/wiki-update-index`   | Add/remove index entries          | `wiki-update-index add <type> <name> <desc>` |
-| `scripts/wiki-log`            | Append standardized log entries   | `wiki-log ingest <title> <summary>`       |
-
-**Always prefer scripts over manual file editing.** Scripts enforce naming conventions and formatting automatically.
 
 ## Workflow Routing
 
 ### Ingest
-New source → fold into wiki. Read `references/ingest.md`. Uses `scripts/wiki-new-page`, `scripts/wiki-update-index`, `scripts/wiki-log`.
+New source → fold into wiki. Read `references/ingest.md`. Use templates from `references/templates/` to create pages. Update `index.md` and `log.md` manually.
 
 ### Query
-Answer from wiki. Read `references/query.md`. Suggest filing answers with `scripts/wiki-*`.
+Answer from wiki. Read `references/query.md`. Suggest filing answers back into wiki with direct file operations.
 
 ### Lint
-Health check. Read `references/lint.md`. Uses `scripts/wiki-log`.
+Health check. Read `references/lint.md`. Append results to `log.md`.
 
 ### Setup
 Initialize new wiki. Read `references/wiki-setup.md`.
 
 ### Create Pages
-Need a template. Read `references/page-templates.md` and load ONLY the template for the page type you're creating.
+Need a template. Read `references/templates/<type>.md` where type matches the page you're creating (concept, entity, decision, comparison, source, or stub).

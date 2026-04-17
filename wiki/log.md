@@ -48,4 +48,16 @@ Fixed 3 issues: (1) added [[decision-immutable-raw-sources]] to [[concept-ingest
 
 ## [2026-04-17] refactor | Decision page naming — type-prefixed-links
 
-Renamed [[decision-type-prefix-links]] → [[decision-type-prefixed-links]] to match [[concept-type-prefixed-links]] naming convention. Updated 2 references (index.md, concept-type-prefixed-links.md). File renamed on disk.
+Renamed `decision-type-prefix-links` → [[decision-type-prefixed-links]] to match [[concept-type-prefixed-links]] naming convention. Updated 2 references (index.md, concept-type-prefixed-links.md). File renamed on disk.
+
+---
+
+## [2026-04-18] lint | Wiki health check
+
+Deleted obsolete [[concept-helper-scripts]] page (scripts were removed from skill). Updated 3 pages to remove script references: [[concept-stub-pages]], [[entity-skill-md]], [[index.md]]. No broken links, no contradictions, no stale claims, no orphans found. Updated index Statistics (27 wiki pages, 8 concepts).
+
+---
+
+## [2026-04-17] lint | Wiki health check
+
+Fixed 1 stale-link reference in log.md (wrapped pre-rename name as code). Updated [[entity-skill-md]] structure to match current SKILL.md (removed page-templates/Core Philosophy/Why This Works; added Lazy Loading Requirement and Helper Scripts sections). Created 2 concept pages: [[concept-helper-scripts]], [[concept-stub-pages]]. Added stubs/ subdir to SCHEMA.md page-types table. Updated index Statistics (24→28 wiki pages, 7→9 concepts). No true orphans; 20 'broken' links verified as intentional in-body documentation examples.

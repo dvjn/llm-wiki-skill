@@ -30,6 +30,6 @@ Answer from existing wiki.
 
 When filing durable synthesis back into wiki:
 
-- Create page: `scripts/wiki-new-page <type> <name>`
-- Update index: `scripts/wiki-update-index add <type> <name> <description>`
-- Log: `scripts/wiki-log synthesis <type> <name> "<summary>"`
+- Create page: Load template `references/templates/<type>.md` and create page directly
+- Update index: Add entry to index.md manually
+- Log: Append to log.md

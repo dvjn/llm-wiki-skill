@@ -8,12 +8,11 @@
 
 ## Structure
 
-- **Core Philosophy** — positions the wiki against traditional RAG, states the key principle ("The LLM writes the wiki")
-- **Three-Layer Architecture** — the canonical directory tree diagram
-- **Global Rules** — link prefix requirements, naming conventions, index/log update obligations
-- **Workflow Routing** — when to load each of the three workflow references
-- **Shared References** — pointers to page-templates and wiki-setup
-- **Why This Works** — the reasoning for LLM-maintained bookkeeping
+- **Lazy Loading Requirement** — task-to-reference mapping table with explicit violations to prevent overloading the context
+- **Directory Structure** — canonical `wiki/` tree diagram
+- **Global Rules** — link prefix requirements, naming conventions, index/log update obligations, stub creation
+
+- **Workflow Routing** — routes to `references/ingest.md`, `references/query.md`, `references/lint.md`, `references/wiki-setup.md`, and `references/templates/<type>.md`
 
 ## Frontmatter (per Agent Skills spec)
 
@@ -51,7 +50,9 @@ Created once during skill development. Updated when the architecture or global c
 ## Related Concepts
 
 - [[concept-three-layer-architecture]] — the architecture SKILL.md describes
-- [[concept-progressive-disclosure]] — the loading model SKILL.md participates in (tier 2)
+- [[concept-progressive-disclosure]] — the loading model SKILL.md participates in (tier 2); the "Lazy Loading Requirement" section enforces it
+
+- [[concept-stub-pages]] — SKILL.md names stub creation as a global rule
 - [[concept-ingest-workflow]] — routed from SKILL.md to `references/ingest.md`
 - [[concept-query-workflow]] — routed from SKILL.md to `references/query.md`
 - [[concept-lint-workflow]] — routed from SKILL.md to `references/lint.md`

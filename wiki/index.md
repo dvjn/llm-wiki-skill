@@ -13,6 +13,7 @@ Domain concepts that appear across the skill's design.
 - [[concept-ingest-workflow]] — process of reading a raw source and folding knowledge into the wiki
 - [[concept-query-workflow]] — answering questions from wiki pages with section-level citations and filing synthesis back
 - [[concept-lint-workflow]] — health-check pass for broken links, orphans, stale claims, and contradictions
+- [[concept-stub-pages]] — placeholder pages for tracked-but-underdeveloped concepts; created by ingest and lint workflows
 
 ## Entities
 
@@ -61,8 +62,8 @@ Per-source summaries.
 | Metric | Count |
 |--------|-------|
 | Raw sources | 11 |
-| Wiki pages | 24 |
-| Concepts | 7 |
+| Wiki pages | 27 |
+| Concepts | 8 |
 | Entities | 4 |
 | Decisions | 4 |
 | Comparisons | 0 |

@@ -22,7 +22,7 @@ Propose fixes; ask confirmation before applying non-trivial changes.
 
 ## Log Format
 
-Use script: `scripts/wiki-log lint "<summary of fixes>"`
+Append to log.md: `## [YYYY-MM-DD] lint | Wiki health check`
 
 ```markdown
 ## [YYYY-MM-DD] lint | Wiki health check

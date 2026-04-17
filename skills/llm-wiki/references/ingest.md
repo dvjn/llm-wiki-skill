@@ -6,18 +6,18 @@ New source in `wiki/raw/` or existing source needs folding into wiki.
 
 1. Read source thoroughly
 2. Discuss key takeaways with user (especially early sources in new wiki)
-3. Create source summary: `scripts/wiki-new-page source <source-name>`
+3. Create source summary: Load template `references/templates/source.md` and create `wiki/pages/sources/source-<name>.md`
 4. Update affected pages
-5. Create new pages using `scripts/wiki-new-page <type> <name>`
-6. Update index: `scripts/wiki-update-index add <type> <name> <description>`
-7. Log: `scripts/wiki-log ingest "<title>" "<summary>"`
+5. Create new pages: Load template `references/templates/<type>.md` and create `wiki/pages/<type>s/<type>-<name>.md`
+6. Update index: Manually add entry to `wiki/index.md` with type, name, and description
+7. Log: Append entry to `wiki/log.md`
 
 ## Outputs (minimum)
 
-- Source summary page: `scripts/wiki-new-page source <source-name>`
+- Source summary page: Load template `references/templates/source.md` and create `wiki/pages/sources/source-<name>.md`
 - Updates to affected pages
-- Index entries added: `scripts/wiki-update-index add <type> <name> <desc>`
-- Log entry appended: `scripts/wiki-log ingest "<title>" "<summary>"`
+- Index entries added: Manually add to `wiki/index.md`
+- Log entry appended: Append to `wiki/log.md`
 
 ## Log Format
 
