@@ -1,6 +1,6 @@
 ---
 name: llm-wiki
-description: Build and maintain a knowledge wiki using LLMs. This skill manages a three-layer architecture (raw sources, LLM-generated wiki pages, and schema documentation) with workflows for ingesting sources, querying knowledge, and linting for consistency. Use this skill whenever the user wants to create a knowledge base, manage research notes, build a wiki, ingest documents for synthesis, or maintain structured documentation that compounds over time. Essential for research projects, book notes, competitive analysis, course notes, or any domain where knowledge accumulates and cross-references matter.
+description: Build and maintain a knowledge wiki using LLMs. Use when a `wiki/` folder exists in the project OR the user explicitly asks to build a wiki. When wiki is present, query it first for project information and use it to document significant changes.
 ---
 
 # LLM Wiki
@@ -55,3 +55,13 @@ Initialize new wiki. Read `references/wiki-setup.md`.
 
 ### Create Pages
 Need a template. Read `references/templates/<type>.md` where type matches the page you're creating (concept, entity, decision, comparison, source, or stub).
+
+### Subagent Delegation
+
+If subagents are available, delegate these operations:
+
+- **Synthesis queries**: Subagent locates relevant pages → you synthesize
+- **Gap/contradiction queries**: Subagent searches across pages → you evaluate
+- **Lint checks**: Parallel subagents for orphans, missing references, term gaps, contradictions, research gaps
+
+If subagents unavailable, perform these operations directly. The workflow remains the same.
