@@ -5,13 +5,13 @@ Answer from existing wiki.
 ## Query Types
 
 - **Lookup** — specific fact. Read index + 1-2 pages. Answer directly.
-- **Synthesis** — connect concepts. Read index + relevant pages. Answer with citations.
-- **Gap/contradiction** — health check. Read index + affected pages. Surface issues.
+- **Synthesis** — connect concepts. If subagents available, delegate to find relevant pages → then synthesize. Otherwise, read index + pages directly.
+- **Gap/contradiction** — health check. If subagents available, delegate search → then evaluate. Otherwise, read index + affected pages directly.
 
 ## Workflow
 
 1. Read `wiki/index.md` to locate pages
-2. Read relevant pages in parallel
+2. For synthesis/gap queries: if subagents available, delegate to find all relevant pages. Otherwise, read relevant pages in parallel.
 3. Read source summaries if provenance/conflict resolution needed
 4. Synthesize with section-level citations: `[[concept-x]] §Section`
 5. Surface gaps noticed while reading

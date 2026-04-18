@@ -4,13 +4,15 @@ Wiki health check.
 
 ## Workflow
 
-1. Scan for contradictions
+1. Scan for contradictions — if subagents available, delegate parallel search
 2. Identify stale claims (newer sources supersede)
-3. Find orphan pages (no inbound links)
-4. Identify frequently mentioned terms without pages
-5. Find missing cross-references
-6. Surface research gaps
+3. Find orphan pages (no inbound links) — if subagents available, delegate
+4. Identify frequently mentioned terms without pages — if subagents available, delegate
+5. Find missing cross-references — if subagents available, delegate
+6. Surface research gaps — if subagents available, delegate
 7. Check AGENTS.md for the "Knowledge Base - Wiki" section. If missing, suggest adding it (see templates/agents-md-wiki-section.md).
+
+For steps 1, 3, 4, 5, 6: if subagents available, delegate parallel subagents → aggregate results → propose fixes. If subagents unavailable, perform checks directly.
 
 Propose fixes; ask confirmation before applying non-trivial changes.
 

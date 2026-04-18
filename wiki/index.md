@@ -33,6 +33,7 @@ Design decisions with rationale.
 - [[decision-type-prefixed-links]] — all links require a type prefix to eliminate namespace collisions
 - [[decision-immutable-raw-sources]] — files in `wiki/raw/` are read-only to the LLM
 - [[decision-schema-in-wiki-dir]] — schema always lives at `wiki/SCHEMA.md`, not in agent config files
+- [[decision-subagent-delegation]] — delegate search-heavy operations to subagents when available
 
 ## Comparisons
 
@@ -63,10 +64,10 @@ Per-source summaries.
 | Metric | Count |
 |--------|-------|
 | Raw sources | 11 |
-| Wiki pages | 28 |
+| Wiki pages | 29 |
 | Concepts | 8 |
 | Entities | 5 |
-| Decisions | 4 |
+| Decisions | 5 |
 | Comparisons | 0 |
 | Synthesis | 0 |
 | Sources | 11 |

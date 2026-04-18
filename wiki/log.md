@@ -4,6 +4,12 @@ Append-only record of ingest, lint, and major synthesis updates.
 
 ---
 
+## [2026-04-18] decision | Subagent delegation for search-heavy operations
+
+Created [[decision-subagent-delegation]]: delegate synthesis queries, gap/contradiction queries, and lint checks (orphans, missing refs, term gaps, contradictions, research gaps) to subagents when available. Falls back to direct execution when unavailable. Updated index (29 pages, 5 decisions).
+
+---
+
 ## [2026-04-17] ingest | agentskills.io — What Are Skills + Specification
 
 Added `raw/articles/article-agentskills-what-are-skills.md` and `raw/articles/article-agentskills-specification.md`. Created source summaries [[source-agentskills-what-are-skills]] and [[source-agentskills-specification]]. Created new concept [[concept-progressive-disclosure]] (three-tier loading: metadata ~100 tokens at startup, instructions <5000 tokens on activation, resources on demand). Updated [[entity-skill-md]] with frontmatter field reference table and size budget per spec. Updated index (18 pages, 7 concepts, 3 sources, 3 raw sources).
